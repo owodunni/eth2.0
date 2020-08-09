@@ -45,6 +45,7 @@ services:
       - validator-data:/data
     command:
       - --beacon-rpc-provider=beacon-node:4000
+      - --monitoring-host=0.0.0.0
       - --wallet-dir=/wallet
       - --wallet-password-file=/password/validator-pw.txt
       - --datadir=/data
