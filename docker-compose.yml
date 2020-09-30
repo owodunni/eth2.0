@@ -7,8 +7,8 @@ services:
     ports:
       - 30303:30303/tcp
       - 30304:30304/udp
+      - 8545:8545
     command:
-      - --goerli
       - --http
       - --http.addr=0.0.0.0
       - --http.vhosts=*
@@ -31,7 +31,7 @@ services:
       - 12000:12000/udp
       - 13000:13000
     command: 
-      --config-file=/config/beacon.yaml
+      - --config-file=/config/beacon.yaml
     networks:
       - core
   
